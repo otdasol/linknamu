@@ -13,8 +13,8 @@ export type Profile = {
 
 // 보여주기용 더미 값입니다. 실제 정보로 교체하세요.
 export const profile: Profile = {
-  name: "김개발",
-  bio: "풀스택 개발자 | 요즘에는 AI 개발에 관심이 많아요",
+  name: "박다솔",
+  bio: "작업치료학과 교수 | 인공지능과 작업치료의 만남이라...재밌어지겠네",
   imageUrl: "/profile.jpg",
   links: [
     { id: "github", title: "🦈 GitHub", url: "https://github.com/otdasol" },
@@ -23,6 +23,6 @@ export const profile: Profile = {
       title: "🏫 University",
       url: "https://occupationaltherapy.donga.ac.kr/occupationaltherapy/CMS/ProfessorMgr/list.do?mCode=MN021",
     },
-    { id: "lab", title: "Lab 🔬", url: "https://otdasol.github.io/" },
+    { id: "lab", title: "❤️ Lab", url: "https://otdasol.github.io/" },
   ],
 };
