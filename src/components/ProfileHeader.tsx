@@ -12,15 +12,15 @@ export default function ProfileHeader({ name, bio, imageUrl }: ProfileHeaderProp
       <Image
         src={imageUrl}
         alt={`${name} 프로필 사진`}
-        width={240}
-        height={240}
+        width={256}
+        height={256}
         preload
-        className="aspect-square w-3/5 max-w-60 rounded-full border-2 border-foreground/80 object-cover"
+        className="size-28 rounded-full object-cover ring-4 ring-glass-border shadow-[0_16px_32px_-12px_var(--color-shadow)] sm:size-32"
       />
-      <h1 className="text-base">
-        <span className="font-bold">{name}</span>
-        <span className="text-foreground/70">, {bio}</span>
-      </h1>
+      <div className="flex flex-col gap-1.5">
+        <h1 className="text-2xl font-bold tracking-tight">{name}</h1>
+        <p className="text-sm leading-relaxed text-foreground/60">{bio}</p>
+      </div>
     </header>
   );
 }

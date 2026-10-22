@@ -1,25 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8faf9;
-  --foreground: #171717;
+  --background: #fdf8f1;
+  --foreground: #3b2f28;
+  --gradient-from: #fdf8f1;
+  --gradient-to: #f9dfcc;
+  --glow: #f6c9a8;
+  --glass: rgb(255 255 255 / 0.45);
+  --glass-hover: rgb(255 255 255 / 0.6);
+  --glass-border: rgb(255 255 255 / 0.7);
+  --shadow: rgb(124 74 44 / 0.18);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-noto-sans-kr);
+  --color-glass: var(--glass);
+  --color-glass-hover: var(--glass-hover);
+  --color-glass-border: var(--glass-border);
+  --color-shadow: var(--shadow);
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1f1915;
+    --foreground: #f3e9e1;
+    --gradient-from: #1f1915;
+    --gradient-to: #3a2a20;
+    --glow: #6b4630;
+    --glass: rgb(255 255 255 / 0.06);
+    --glass-hover: rgb(255 255 255 / 0.1);
+    --glass-border: rgb(255 255 255 / 0.12);
+    --shadow: rgb(0 0 0 / 0.35);
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
+  /* 글래스 카드 뒤로 은은하게 비치도록 살구빛 광원을 겹칩니다. */
+  background-image:
+    radial-gradient(circle at 85% 10%, var(--glow) 0%, transparent 45%),
+    radial-gradient(circle at 10% 90%, var(--glow) 0%, transparent 40%),
+    linear-gradient(165deg, var(--gradient-from) 0%, var(--gradient-to) 100%);
+  background-attachment: fixed;
   color: var(--foreground);
-  font-family: var(--font-noto-sans-kr), sans-serif;
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
 }
