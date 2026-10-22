@@ -18,7 +18,11 @@ export const profile: Profile = {
   imageUrl: "/profile.jpg",
   links: [
     { id: "github", title: "🦈 GitHub", url: "https://github.com/otdasol" },
-    { id: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com/" },
-    { id: "blog", title: "Blog", url: "https://example.com/" },
+    {
+      id: "university",
+      title: "🏫 University",
+      url: "https://occupationaltherapy.donga.ac.kr/occupationaltherapy/CMS/ProfessorMgr/list.do?mCode=MN021",
+    },
+    { id: "lab", title: "Lab 🔬", url: "https://otdasol.github.io/" },
   ],
 };
